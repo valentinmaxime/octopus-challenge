@@ -1,0 +1,382 @@
+[
+    
+    {   "id": "ST", "type": "segment",
+        "name": "Transaction Set Header",
+        "req": "Mandatory",
+        "max_uses": 1,
+        "notes": "",
+        "first_value" : "867",
+        "elements": [
+            {"id": "ST01"},
+            {"id": "ST02"}
+        ]
+    },    
+    {   
+        "id": "BPT", "type": "segment",
+        "name": "Beginning Segment for Product Transfer and Resale",
+        "req": "M",
+        "max_uses": 1,
+        "notes": "",
+        "first_value" : "MULTIPLE",
+        "elements": [
+            {"id": "BPT01"},
+            {"id": "BPT02"},
+            {"id": "BPT03"},
+            {"id": "BPT04"},
+            {"id": "BPT09"}
+        ]
+    },
+    {   
+        "id": "REF", "type": "segment",
+        "name": "Reference Identification",
+        "req": "O",
+        "max_uses": 12,
+        "notes": "To specify identifying information",
+        "first_value" : "Q5",
+        "elements": [
+            {"id": "REF01"},
+            {"id": "REF03"}
+        ]
+    },
+    {   
+        "id": "N1", "type": "loop",
+        "name": "Transmission Distribution Service Provider",
+        "req": "O",
+        "max_uses": 1,
+        "first_value" : "8S",
+        "elements": [
+                    {"id": "N101"},
+                    {"id": "N102"},
+                    {"id": "N103"},
+                    {"id": "N104"},
+                    {"id": "N106"}
+                ]
+    },
+    {
+        "id": "N1", "type": "loop",
+        "name": "ERCOT",
+        "req": "O",
+        "max_uses": 1,
+        "first_value" : "AY",
+        "notes": "To identify a party by type of organization, name, and code",
+        "elements": [
+            {"id": "N101"},
+            {"id": "N102"},
+            {"id": "N103"},
+            {"id": "N104"},
+            {"id": "N106"}
+        ]
+    },
+    {
+        "id": "N1", "type": "loop",
+        "name": "Competitive Retailer",
+        "req": "O",
+        "max_uses": 1,
+        "first_value" : "SJ",
+        "notes": "To identify a party by type of organization, name, and code",
+        "elements": [
+            {"id": "N101"},
+            {"id": "N102"},
+            {"id": "N103"},
+            {"id": "N104"},
+            {"id": "N106"}
+        ]
+    },
+    {   
+        "id": "PTD", "type": "loop",
+        "name": "Product Transfer and Resale Detail (Non-Interval Detail)",
+        "req": "M",
+        "max_uses": 1,
+        "notes": "To indicate the start of detail information relating to the transfer/resale of a product and provide identifying data",
+        "first_value" : "PL",
+        "elements": [
+            {"id": "PTD01"},
+            {"id": "PTD04"},
+            {"id": "PTD05"},
+            {"id": "PTD06"}
+        ]
+    },
+    {
+        "id": "DTM", "type": "segment",
+        "name": "Service Period Start",
+        "req": "O",
+        "max_uses": 1,
+        "notes": "To specify pertinent dates and times",
+        "first_value" : "150",
+        "elements": [
+            {"id": "DTM01"},
+            {"id": "DTM02"}
+        ]
+    },
+    {
+        "id": "DTM", "type": "segment",
+        "name": "Service Period End",
+        "req": "O",
+        "max_uses": 1,
+        "notes": "To specify pertinent dates and times",
+        "first_value" : "151",
+        "elements": [
+            {"id": "DTM01"},
+            {"id": "DTM02"}
+        ]
+    },
+    {
+        "id": "DTM", "type": "segment",
+        "name": "Exchange Date",
+        "req": "O",
+        "max_uses": 1,
+        "notes": "To specify pertinent dates and times",
+        "first_value" : "514",
+        "elements": [
+            {"id": "DTM01"},
+            {"id": "DTM02"}
+        ]
+    },
+    {
+        "id": "REF", "type": "segment",
+        "name": "Meter Role",
+        "req": "O",
+        "max_uses": 1,
+        "notes": "To specify identifying information",
+        "first_value" : "JH",
+        "elements": [
+            {"id": "REF01"},
+            {"id": "REF02"}
+        ]
+    },
+    {
+        "id": "REF", "type": "segment",
+        "name": "Reference Identification (Power Region)",
+        "req": "O",
+        "max_uses": 1,
+        "notes": "To specify identifying information",
+        "first_value" : "SR",
+        "elements": [
+            {"id": "REF01"},
+            {"id": "REF02"}
+        ]
+    },
+    {
+        "id": "REF", "type": "segment",
+        "name": "Meter Type",
+        "req": "O",
+        "max_uses": 1,
+        "first_value" : "MT",
+        "notes": "To specify identifying information",
+        "elements": [
+            {"id": "REF01"},
+            {"id": "REF02"}
+        ]
+    },
+    {
+        "id": "QTY", "type": "loop",
+        "name": "Quantity",
+        "req": "O",
+        "max_uses": 1,
+        "notes": "To specify quantity information",
+        "first_value" : "QD",
+        "elements": [
+            {"id": "QTY01"},
+            {"id": "QTY02"},
+            {"id": "QTY03"}
+        ]
+    },
+    {
+        "id": "MEA", "type": "segment",
+        "name": "Meter Reads",
+        "req": "O",
+        "max_uses": 1,
+        "notes": "To specify physical measurements or counts, including dimensions, tolerances, variances, and weights",
+        "first_value" : "PRQ",
+        "elements": [
+            {"id": "MEA02"},
+            {"id": "MEA03"},
+            {"id": "MEA07"}
+        ]
+    },
+    {
+        "id": "MEA", "type": "segment",
+        "name": "Meter Reads",
+        "req": "O",
+        "max_uses": 1,
+        "notes": "To specify physical measurements or counts, including dimensions, tolerances, variances, and weights",
+        "first_value" : "AA",
+        "elements": [
+            {"id": "MEA01"},
+            {"id": "MEA02"},
+            {"id": "MEA03"}
+        ]
+    },
+    {
+        "id": "MEA", "type": "segment",
+        "name": "Transformer Loss Factor",
+        "req": "O",
+        "max_uses": 1,
+        "notes": "To specify physical measurements or counts, including dimensions, tolerances, variances, and weights",
+        "first_value" : "CO",
+        "elements": [
+            {"id": "MEA02"},
+            {"id": "MEA03"}
+        ]
+    }, 
+    {
+        "id": "MEA", "type": "segment",
+        "name": "Meter Multiplier",
+        "req": "O",
+        "max_uses": 1,
+        "first_value" : "MU",
+        "notes": "To specify physical measurements or counts, including dimensions, tolerances, variances, and weights",
+        "elements": [
+            {"id": "MEA02"},
+            {"id": "MEA03"}
+        ]
+    },
+    {
+        "id": "MEA", "type": "segment",
+        "name": "Power Factor",
+        "req": "O",
+        "max_uses": 1,
+        "first_value" : "ZA",
+        "notes": "To specify physical measurements or counts, including dimensions, tolerances, variances, and weights",
+        "elements": [
+            {"id": "MEA02"},
+            {"id": "MEA03"}
+        ]
+    },
+    {
+        "id": "PTD", "type": "loop",
+        "name": "Product Transfer and Resale Detail (Unmetered Services)",
+        "req": "C",
+        "max_uses": 1,
+        "notes": "To indicate the start of detail information relating to the transfer/resale of a product and provide identifying data",
+        "first_value" : "BD",
+        "elements": [
+            {"id": "PTD01"}
+        ]
+    },
+    {
+        "id": "PTD", "type": "loop",
+        "name": "Product Transfer and Resale Detail (Non-Interval Usage Summary)",
+        "req": "C",
+        "max_uses": 1,
+        "notes": "To indicate the start of detail information relating to the transfer/resale of a product and provide identifying data",
+        "first_value" : "SU",
+        "elements": [
+            {"id": "PTD01"}
+        ]
+    },
+    {
+        "id": "REF", "type": "segment",
+        "name": "Unmetered Service Type",
+        "req": "O",
+        "max_uses": 1,
+        "notes": "To specify identifying information",
+        "first_value" : "PRT",
+        "elements": [
+            {"id": "REF01"},
+            {"id": "REF02"},
+            {"id": "REF03"}
+        ]
+    },
+    {
+        "id": "PTD", "type": "loop",
+        "name": "Product Transfer and Resale Detail (Interval Summary)",
+        "req": "M",
+        "max_uses": 1,
+        "notes": "To indicate the start of detail information relating to the transfer/resale of a product and provide identifying data",
+        "first_value" : "BO",
+        "elements": [
+            {"id": "PTD01"},
+            {"id": "PTD04"},
+            {"id": "PTD05"},
+            {"id": "PTD06"}
+        ]
+    },        
+    {
+        "id": "QTY", "type": "segment",
+        "name": "Quantity",
+        "req": "O",
+        "max_uses": 1,
+        "notes": "To specify quantity information",
+        "first_value" : "KA",
+        "elements": [
+            {"id": "QTY01"},
+            {"id": "QTY02"}
+        ]
+    },
+    {
+        "id": "PTD", "type": "loop",
+        "name": "Product Transfer and Resale Detail (Interval Detail)",
+        "req": "M",
+        "max_uses": 1,
+        "notes": "To indicate the start of detail information relating to the transfer/resale of a product and provide identifying data",
+        "first_value" : "PM",
+        "elements": [
+            {"id": "PTD01"},
+            {"id": "PTD04"},
+            {"id": "PTD05"}
+        ]
+    },
+    {
+        "id": "REF", "type": "segment",
+        "name": "Channel Number",
+        "req": "O",
+        "max_uses": 1,
+        "notes": "To specify identifying information",
+        "first_value" : "6W",
+        "elements": [
+            {"id": "REF01"},
+            {"id": "REF02"}
+        ]
+    },
+    {
+        "id": "QTY", "type": "loop",
+        "name": "Quantity",
+        "req": "O",
+        "max_uses": 1,
+        "notes": "To specify quantity information",
+        "first_value" : "KA",
+        "elements": [
+            {"id": "QTY01"},
+            {"id": "QTY02"}
+        ]
+    },
+    {
+        "id": "DTM", "type": "segment",
+        "name": "Interval End Time",
+        "req": "O",
+        "max_uses": 1,
+        "notes": "To specify pertinent dates and times",
+        "first_value" : "194",
+        "elements": [
+            {"id": "DTM01"},
+            {"id": "DTM02"},
+            {"id": "DTM03"}
+        ]
+    },
+    {   
+        "id": "SE", "type": "segment",
+        "name": "Transaction Set Trailer",
+        "req": "M",
+        "max_uses": 1,
+        "notes": "",
+        "first_value" : "END",
+        "elements": [
+            {"id": "SE01"},
+            {"id": "SE01"}
+        ]
+    }
+]
+
+
+    
+                   
+
+
+
+
+
+
+
+
+

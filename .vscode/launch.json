@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Module",
+            "type": "python",
+            "request": "launch",
+            "module": "edi_reader",
+            "args": ["edi_reader\\conf\\conf_model","edi_reader\\input"]
+        },
+    ]
+}
